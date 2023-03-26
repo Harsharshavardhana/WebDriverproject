@@ -1,7 +1,6 @@
 package test;
 
 import java.util.Scanner;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +15,7 @@ public class saucedemo {
 		WebElement username=Driver.findElement(By.xpath("//*[@placeholder=\'Username\']"));
 		username.sendKeys("standard_user");
 		System.out.println("enter 0 for pass test case esle 1 for negative test case ");
-		
+	    //this code both postive and nwgative case	
 		try (Scanner input = new Scanner(System.in)) {
 			int x =input.nextInt();
 			if(x==0) {
