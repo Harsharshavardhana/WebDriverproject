@@ -13,18 +13,17 @@ public class screenshot {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chromedriver","chromedriver.exe");
-        WebDriver driver=new ChromeDriver()	;
-        driver.get("https://www.facebook.com/");
-        driver.manage().window().maximize();
-        
-        TakesScreenshot tsobj =(TakesScreenshot) driver;
-        File Fobj=tsobj.getScreenshotAs(OutputType.FILE);
-        File scr=new File("img.jpg");
-        FileUtils.copyFile(Fobj,scr);
-        
-        
-        driver.quit();
+		System.setProperty("webdriver.chromedriver", "chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.facebook.com/");
+		driver.manage().window().maximize();
+
+		TakesScreenshot tsobj = (TakesScreenshot) driver;
+		File Fobj = tsobj.getScreenshotAs(OutputType.FILE);
+		File scr = new File("img.jpg");
+		FileUtils.copyFile(Fobj, scr);
+
+		driver.quit();
 	}
 
 }
